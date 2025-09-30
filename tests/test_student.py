@@ -13,10 +13,6 @@ def test_student_initialization():
     assert student01.name == name
     assert student01.year == year
     assert student01.classes_list == classes_list
-    assert "Psych 101" in student01.classes_list
-    assert "Psych 202" in student01.classes_list
-    assert "Calc 1" in student01.classes_list
-    assert len(student01.classes_list) == 3
 
 def test_add_class():
     # Assert
@@ -85,7 +81,7 @@ def test_summary():
     expected = "Steph is a Senior enrolled in 3 classes"
     # Act
     result = student01.summary()
-
+    print(result)
     # Assert
     assert result == expected
     assert result == "Steph is a Senior enrolled in 3 classes"
